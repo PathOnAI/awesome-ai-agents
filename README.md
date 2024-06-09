@@ -22,3 +22,8 @@
 * https://github.com/agiresearch/AIOS
 * https://github.com/phidatahq/phidata/tree/main/cookbook/llm_os
 * https://github.com/cpacker/MemGPT
+
+## AI developer
+* https://github.com/Pythagora-io/gpt-pilot
+* https://github.com/OpenDevin/OpenDevin
+* https://github.com/princeton-nlp/SWE-bench
