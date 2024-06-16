@@ -13,6 +13,7 @@
 
 ## 4. Large Action Model
 * https://sellagen.com/nelima
+* https://blog.salesforceairesearch.com/large-action-models/
 
 ## 5. LLM grounding
 * Towards Efficient LLM Grounding for Embodied Multi-Agent Collaboration
