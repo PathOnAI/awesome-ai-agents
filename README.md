@@ -14,6 +14,7 @@
 ## 4. Large Action Model
 * https://sellagen.com/nelima
 * https://blog.salesforceairesearch.com/large-action-models/
+* https://github.com/lavague-ai/LaVague
 
 ## 5. LLM grounding
 * Towards Efficient LLM Grounding for Embodied Multi-Agent Collaboration
