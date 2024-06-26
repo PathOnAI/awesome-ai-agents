@@ -14,7 +14,13 @@
 ## 4. Large Action Model
 * https://sellagen.com/nelima
 * https://blog.salesforceairesearch.com/large-action-models/
+
+## 6. browsing agent
 * https://github.com/lavague-ai/LaVague
+* https://github.com/OpenAdaptAI/OpenAdapt
+* https://github.com/vignshwarar/AI-Employe
+* https://news.ycombinator.com/item?id=39698546
+* https://github.com/handrew/browserpilot
 
 ## 5. LLM grounding
 * Towards Efficient LLM Grounding for Embodied Multi-Agent Collaboration
