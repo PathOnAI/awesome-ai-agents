@@ -41,3 +41,6 @@
 * https://github.com/princeton-nlp/SWE-bench
 * https://superagi.com/supercoder/
 * https://github.com/Pythagora-io/gpt-pilot
+* https://codeium.com/
+* https://www.augmentcode.com/
+* https://www.factory.ai/
