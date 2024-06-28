@@ -15,27 +15,27 @@
 * https://sellagen.com/nelima
 * https://blog.salesforceairesearch.com/large-action-models/
 
-## 6. browsing agent
+## 5. browsing agent
 * https://github.com/lavague-ai/LaVague
 * https://github.com/OpenAdaptAI/OpenAdapt
 * https://github.com/vignshwarar/AI-Employe
 * https://news.ycombinator.com/item?id=39698546
 * https://github.com/handrew/browserpilot
 
-## 5. LLM grounding
+## 6. LLM grounding
 * Towards Efficient LLM Grounding for Embodied Multi-Agent Collaboration
   * https://arxiv.org/pdf/2405.14314
 * REX: Rapid Exploration and eXploitation for AI agents
   * https://arxiv.org/pdf/2307.08962
 
-## 6. OS
+## 7. OS
 * https://community.aws/content/2eojjD2E7TBgPFJmB2FGAtrSSBh/the-rise-of-the-llm-os-from-aios-to-memgpt-and-beyond?lang=en
 * https://github.com/agiresearch/AIOS
 * https://github.com/phidatahq/phidata/tree/main/cookbook/llm_os
 * https://github.com/cpacker/MemGPT
 * https://superagi.com/introducing-autonode-advancing-rpa-with-a-multi-expert-ai-system/
 
-## 7. AI developer
+## 8. AI developer
 * https://github.com/Pythagora-io/gpt-pilot
 * https://github.com/OpenDevin/OpenDevin
 * https://github.com/princeton-nlp/SWE-bench
