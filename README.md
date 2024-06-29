@@ -15,12 +15,18 @@
 * https://sellagen.com/nelima
 * https://blog.salesforceairesearch.com/large-action-models/
 
-## 5. browsing agent
-* https://github.com/lavague-ai/LaVague
-* https://github.com/OpenAdaptAI/OpenAdapt
-* https://github.com/vignshwarar/AI-Employe
-* https://news.ycombinator.com/item?id=39698546
-* https://github.com/handrew/browserpilot
+## 5. 
+* web browsing agent
+  * https://github.com/lavague-ai/LaVague
+  * https://github.com/OpenAdaptAI/OpenAdapt
+  * https://github.com/vignshwarar/AI-Employe
+  * https://news.ycombinator.com/item?id=39698546
+  * https://github.com/handrew/browserpilot
+* computer control agent
+  * mouse control
+    * https://github.com/OthersideAI/self-operating-computer
+  * non-mouse control
+    * https://github.com/OpenInterpreter/open-interpreter
 
 ## 6. LLM grounding
 * Towards Efficient LLM Grounding for Embodied Multi-Agent Collaboration
