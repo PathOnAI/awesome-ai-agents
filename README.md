@@ -15,7 +15,7 @@
 * https://sellagen.com/nelima
 * https://blog.salesforceairesearch.com/large-action-models/
 
-## 5. 
+## 5. browsing agent
 * web browsing agent
   * https://github.com/lavague-ai/LaVague
   * https://github.com/OpenAdaptAI/OpenAdapt
