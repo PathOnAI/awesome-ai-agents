@@ -54,3 +54,10 @@
 * https://www.augmentcode.com/
 * https://www.factory.ai/
 * https://github.com/stitionai/devika
+
+## 9. multi agent
+* https://github.com/AI-Engineer-Foundation/agent-protocol
+* https://github.com/microsoft/autogen
+* https://github.com/geekan/MetaGPT
+* https://github.com/joaomdmoura/crewAI
+* https://github.com/langchain-ai/langgraph
