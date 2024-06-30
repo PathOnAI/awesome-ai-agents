@@ -50,3 +50,4 @@
 * https://codeium.com/
 * https://www.augmentcode.com/
 * https://www.factory.ai/
+* https://github.com/stitionai/devika
