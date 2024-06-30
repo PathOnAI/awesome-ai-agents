@@ -44,6 +44,9 @@
 ## 8. AI developer
 * https://github.com/Pythagora-io/gpt-pilot
 * https://github.com/OpenDevin/OpenDevin
+  * core contributos
+    * https://xwang.dev/
+    * https://rbren.io/
 * https://github.com/princeton-nlp/SWE-bench
 * https://superagi.com/supercoder/
 * https://github.com/Pythagora-io/gpt-pilot
