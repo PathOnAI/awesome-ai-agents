@@ -22,6 +22,9 @@
   * https://github.com/vignshwarar/AI-Employe
   * https://news.ycombinator.com/item?id=39698546
   * https://github.com/handrew/browserpilot
+* web agent research
+  * https://github.com/ServiceNow/BrowserGym
+  * https://webarena.dev/
 * computer control agent
   * mouse control
     * https://github.com/OthersideAI/self-operating-computer
