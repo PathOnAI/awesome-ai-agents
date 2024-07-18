@@ -1,0 +1,5 @@
+langgraph
+python-dotenv
+langchain-community
+langchain_experimental
+langchain_openai

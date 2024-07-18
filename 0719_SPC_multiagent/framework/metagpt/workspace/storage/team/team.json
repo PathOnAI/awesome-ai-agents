@@ -1,0 +1,456 @@
+{
+    "env": {
+        "desc": "",
+        "roles": {
+            "SimpleCoder": {
+                "name": "Alice",
+                "profile": "SimpleCoder",
+                "goal": "",
+                "constraints": "",
+                "desc": "",
+                "is_human": false,
+                "role_id": "",
+                "states": [
+                    "0. SimpleWriteCode"
+                ],
+                "actions": [
+                    {
+                        "name": "SimpleWriteCode",
+                        "i_context": "",
+                        "prefix": "You are a SimpleCoder, named Alice, your goal is . ",
+                        "desc": "",
+                        "PROMPT_TEMPLATE": "\n    Write a python function that can {instruction}.\n    Return ```python your_code_here ``` with NO other texts,\n    your code:\n    ",
+                        "__module_class_name": "__main__.SimpleWriteCode"
+                    }
+                ],
+                "rc": {
+                    "memory": {
+                        "storage": [
+                            {
+                                "id": "bca4708a02de40d8884436e32eddcd89",
+                                "content": "x = [1,2,3], y =[10, 20, 30], make a scatter plot of x and y",
+                                "instruct_content": null,
+                                "role": "Human",
+                                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                "sent_from": "",
+                                "send_to": [
+                                    "<all>"
+                                ]
+                            },
+                            {
+                                "id": "8b1ca9a5e3654f94b7194b90581f0575",
+                                "content": "\nimport matplotlib.pyplot as plt\n\ndef create_scatter_plot(x, y):\n    plt.scatter(x, y)\n    plt.xlabel('X-axis')\n    plt.ylabel('Y-axis')\n    plt.title('Scatter Plot of x and y')\n    plt.show()\n\nx = [1, 2, 3]\ny = [10, 20, 30]\ncreate_scatter_plot(x, y)\n",
+                                "instruct_content": null,
+                                "role": "SimpleCoder",
+                                "cause_by": "__main__.SimpleWriteCode",
+                                "sent_from": "__main__.SimpleCoder",
+                                "send_to": [
+                                    "<all>"
+                                ]
+                            }
+                        ],
+                        "index": {
+                            "metagpt.actions.add_requirement.UserRequirement": [
+                                {
+                                    "id": "bca4708a02de40d8884436e32eddcd89",
+                                    "content": "x = [1,2,3], y =[10, 20, 30], make a scatter plot of x and y",
+                                    "instruct_content": null,
+                                    "role": "Human",
+                                    "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                    "sent_from": "",
+                                    "send_to": [
+                                        "<all>"
+                                    ]
+                                }
+                            ],
+                            "__main__.SimpleWriteCode": [
+                                {
+                                    "id": "8b1ca9a5e3654f94b7194b90581f0575",
+                                    "content": "\nimport matplotlib.pyplot as plt\n\ndef create_scatter_plot(x, y):\n    plt.scatter(x, y)\n    plt.xlabel('X-axis')\n    plt.ylabel('Y-axis')\n    plt.title('Scatter Plot of x and y')\n    plt.show()\n\nx = [1, 2, 3]\ny = [10, 20, 30]\ncreate_scatter_plot(x, y)\n",
+                                    "instruct_content": null,
+                                    "role": "SimpleCoder",
+                                    "cause_by": "__main__.SimpleWriteCode",
+                                    "sent_from": "__main__.SimpleCoder",
+                                    "send_to": [
+                                        "<all>"
+                                    ]
+                                }
+                            ]
+                        },
+                        "ignore_id": false
+                    },
+                    "working_memory": {
+                        "storage": [],
+                        "index": {},
+                        "ignore_id": false
+                    },
+                    "state": -1,
+                    "watch": [
+                        "metagpt.actions.add_requirement.UserRequirement"
+                    ],
+                    "react_mode": "react",
+                    "max_react_loop": 1
+                },
+                "addresses": [
+                    "__main__.SimpleCoder",
+                    "Alice"
+                ],
+                "planner": {
+                    "plan": {
+                        "goal": "",
+                        "context": "",
+                        "tasks": [],
+                        "task_map": {},
+                        "current_task_id": ""
+                    },
+                    "working_memory": {
+                        "storage": [],
+                        "index": {},
+                        "ignore_id": false
+                    },
+                    "auto_run": false
+                },
+                "recovered": false,
+                "latest_observed_msg": null,
+                "__module_class_name": "__main__.SimpleCoder"
+            },
+            "SimpleTester": {
+                "name": "Bob",
+                "profile": "SimpleTester",
+                "goal": "",
+                "constraints": "",
+                "desc": "",
+                "is_human": false,
+                "role_id": "",
+                "states": [
+                    "0. SimpleWriteTest"
+                ],
+                "actions": [
+                    {
+                        "name": "SimpleWriteTest",
+                        "i_context": "",
+                        "prefix": "You are a SimpleTester, named Bob, your goal is . ",
+                        "desc": "",
+                        "PROMPT_TEMPLATE": "\n    Context: {context}\n    Write {k} unit tests using pytest for the given function, assuming you have imported it.\n    Return ```python your_code_here ``` with NO other texts,\n    your code:\n    ",
+                        "__module_class_name": "__main__.SimpleWriteTest"
+                    }
+                ],
+                "rc": {
+                    "memory": {
+                        "storage": [
+                            {
+                                "id": "bca4708a02de40d8884436e32eddcd89",
+                                "content": "x = [1,2,3], y =[10, 20, 30], make a scatter plot of x and y",
+                                "instruct_content": null,
+                                "role": "Human",
+                                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                "sent_from": "",
+                                "send_to": [
+                                    "<all>"
+                                ]
+                            },
+                            {
+                                "id": "8b1ca9a5e3654f94b7194b90581f0575",
+                                "content": "\nimport matplotlib.pyplot as plt\n\ndef create_scatter_plot(x, y):\n    plt.scatter(x, y)\n    plt.xlabel('X-axis')\n    plt.ylabel('Y-axis')\n    plt.title('Scatter Plot of x and y')\n    plt.show()\n\nx = [1, 2, 3]\ny = [10, 20, 30]\ncreate_scatter_plot(x, y)\n",
+                                "instruct_content": null,
+                                "role": "SimpleCoder",
+                                "cause_by": "__main__.SimpleWriteCode",
+                                "sent_from": "__main__.SimpleCoder",
+                                "send_to": [
+                                    "<all>"
+                                ]
+                            }
+                        ],
+                        "index": {
+                            "metagpt.actions.add_requirement.UserRequirement": [
+                                {
+                                    "id": "bca4708a02de40d8884436e32eddcd89",
+                                    "content": "x = [1,2,3], y =[10, 20, 30], make a scatter plot of x and y",
+                                    "instruct_content": null,
+                                    "role": "Human",
+                                    "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                    "sent_from": "",
+                                    "send_to": [
+                                        "<all>"
+                                    ]
+                                }
+                            ],
+                            "__main__.SimpleWriteCode": [
+                                {
+                                    "id": "8b1ca9a5e3654f94b7194b90581f0575",
+                                    "content": "\nimport matplotlib.pyplot as plt\n\ndef create_scatter_plot(x, y):\n    plt.scatter(x, y)\n    plt.xlabel('X-axis')\n    plt.ylabel('Y-axis')\n    plt.title('Scatter Plot of x and y')\n    plt.show()\n\nx = [1, 2, 3]\ny = [10, 20, 30]\ncreate_scatter_plot(x, y)\n",
+                                    "instruct_content": null,
+                                    "role": "SimpleCoder",
+                                    "cause_by": "__main__.SimpleWriteCode",
+                                    "sent_from": "__main__.SimpleCoder",
+                                    "send_to": [
+                                        "<all>"
+                                    ]
+                                }
+                            ]
+                        },
+                        "ignore_id": false
+                    },
+                    "working_memory": {
+                        "storage": [],
+                        "index": {},
+                        "ignore_id": false
+                    },
+                    "state": 0,
+                    "watch": [
+                        "__main__.SimpleWriteCode",
+                        "__main__.SimpleWriteReview"
+                    ],
+                    "react_mode": "react",
+                    "max_react_loop": 1
+                },
+                "addresses": [
+                    "Bob",
+                    "__main__.SimpleTester"
+                ],
+                "planner": {
+                    "plan": {
+                        "goal": "",
+                        "context": "",
+                        "tasks": [],
+                        "task_map": {},
+                        "current_task_id": ""
+                    },
+                    "working_memory": {
+                        "storage": [],
+                        "index": {},
+                        "ignore_id": false
+                    },
+                    "auto_run": false
+                },
+                "recovered": false,
+                "latest_observed_msg": {
+                    "id": "8b1ca9a5e3654f94b7194b90581f0575",
+                    "content": "\nimport matplotlib.pyplot as plt\n\ndef create_scatter_plot(x, y):\n    plt.scatter(x, y)\n    plt.xlabel('X-axis')\n    plt.ylabel('Y-axis')\n    plt.title('Scatter Plot of x and y')\n    plt.show()\n\nx = [1, 2, 3]\ny = [10, 20, 30]\ncreate_scatter_plot(x, y)\n",
+                    "instruct_content": null,
+                    "role": "SimpleCoder",
+                    "cause_by": "__main__.SimpleWriteCode",
+                    "sent_from": "__main__.SimpleCoder",
+                    "send_to": [
+                        "<all>"
+                    ]
+                },
+                "__module_class_name": "__main__.SimpleTester"
+            },
+            "RunnableCoder": {
+                "name": "Sam",
+                "profile": "RunnableCoder",
+                "goal": "",
+                "constraints": "",
+                "desc": "",
+                "is_human": false,
+                "role_id": "",
+                "states": [
+                    "0. SimpleRunCode"
+                ],
+                "actions": [
+                    {
+                        "name": "SimpleRunCode",
+                        "i_context": "",
+                        "prefix": "You are a RunnableCoder, named Sam, your goal is . ",
+                        "desc": "",
+                        "__module_class_name": "__main__.SimpleRunCode"
+                    }
+                ],
+                "rc": {
+                    "memory": {
+                        "storage": [
+                            {
+                                "id": "bca4708a02de40d8884436e32eddcd89",
+                                "content": "x = [1,2,3], y =[10, 20, 30], make a scatter plot of x and y",
+                                "instruct_content": null,
+                                "role": "Human",
+                                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                "sent_from": "",
+                                "send_to": [
+                                    "<all>"
+                                ]
+                            }
+                        ],
+                        "index": {
+                            "metagpt.actions.add_requirement.UserRequirement": [
+                                {
+                                    "id": "bca4708a02de40d8884436e32eddcd89",
+                                    "content": "x = [1,2,3], y =[10, 20, 30], make a scatter plot of x and y",
+                                    "instruct_content": null,
+                                    "role": "Human",
+                                    "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                    "sent_from": "",
+                                    "send_to": [
+                                        "<all>"
+                                    ]
+                                }
+                            ],
+                            "__main__.SimpleWriteCode": []
+                        },
+                        "ignore_id": false
+                    },
+                    "working_memory": {
+                        "storage": [],
+                        "index": {},
+                        "ignore_id": false
+                    },
+                    "state": 0,
+                    "watch": [
+                        "__main__.SimpleWriteCode",
+                        "__main__.SimpleWriteTest"
+                    ],
+                    "react_mode": "by_order",
+                    "max_react_loop": 1
+                },
+                "addresses": [
+                    "Sam",
+                    "__main__.RunnableCoder"
+                ],
+                "planner": {
+                    "plan": {
+                        "goal": "",
+                        "context": "",
+                        "tasks": [],
+                        "task_map": {},
+                        "current_task_id": ""
+                    },
+                    "working_memory": {
+                        "storage": [],
+                        "index": {},
+                        "ignore_id": false
+                    },
+                    "auto_run": false
+                },
+                "recovered": false,
+                "latest_observed_msg": {
+                    "id": "8b1ca9a5e3654f94b7194b90581f0575",
+                    "content": "\nimport matplotlib.pyplot as plt\n\ndef create_scatter_plot(x, y):\n    plt.scatter(x, y)\n    plt.xlabel('X-axis')\n    plt.ylabel('Y-axis')\n    plt.title('Scatter Plot of x and y')\n    plt.show()\n\nx = [1, 2, 3]\ny = [10, 20, 30]\ncreate_scatter_plot(x, y)\n",
+                    "instruct_content": null,
+                    "role": "SimpleCoder",
+                    "cause_by": "__main__.SimpleWriteCode",
+                    "sent_from": "__main__.SimpleCoder",
+                    "send_to": [
+                        "<all>"
+                    ]
+                },
+                "__module_class_name": "__main__.RunnableCoder"
+            },
+            "SimpleReviewer": {
+                "name": "Charlie",
+                "profile": "SimpleReviewer",
+                "goal": "",
+                "constraints": "",
+                "desc": "",
+                "is_human": false,
+                "role_id": "",
+                "states": [
+                    "0. SimpleWriteReview"
+                ],
+                "actions": [
+                    {
+                        "name": "SimpleWriteReview",
+                        "i_context": "",
+                        "prefix": "You are a SimpleReviewer, named Charlie, your goal is . ",
+                        "desc": "",
+                        "PROMPT_TEMPLATE": "\n    Context: {context}\n    Review the test cases and provide one critical comments:\n    ",
+                        "__module_class_name": "__main__.SimpleWriteReview"
+                    }
+                ],
+                "rc": {
+                    "memory": {
+                        "storage": [
+                            {
+                                "id": "bca4708a02de40d8884436e32eddcd89",
+                                "content": "x = [1,2,3], y =[10, 20, 30], make a scatter plot of x and y",
+                                "instruct_content": null,
+                                "role": "Human",
+                                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                "sent_from": "",
+                                "send_to": [
+                                    "<all>"
+                                ]
+                            },
+                            {
+                                "id": "8b1ca9a5e3654f94b7194b90581f0575",
+                                "content": "\nimport matplotlib.pyplot as plt\n\ndef create_scatter_plot(x, y):\n    plt.scatter(x, y)\n    plt.xlabel('X-axis')\n    plt.ylabel('Y-axis')\n    plt.title('Scatter Plot of x and y')\n    plt.show()\n\nx = [1, 2, 3]\ny = [10, 20, 30]\ncreate_scatter_plot(x, y)\n",
+                                "instruct_content": null,
+                                "role": "SimpleCoder",
+                                "cause_by": "__main__.SimpleWriteCode",
+                                "sent_from": "__main__.SimpleCoder",
+                                "send_to": [
+                                    "<all>"
+                                ]
+                            }
+                        ],
+                        "index": {
+                            "metagpt.actions.add_requirement.UserRequirement": [
+                                {
+                                    "id": "bca4708a02de40d8884436e32eddcd89",
+                                    "content": "x = [1,2,3], y =[10, 20, 30], make a scatter plot of x and y",
+                                    "instruct_content": null,
+                                    "role": "Human",
+                                    "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                    "sent_from": "",
+                                    "send_to": [
+                                        "<all>"
+                                    ]
+                                }
+                            ],
+                            "__main__.SimpleWriteCode": [
+                                {
+                                    "id": "8b1ca9a5e3654f94b7194b90581f0575",
+                                    "content": "\nimport matplotlib.pyplot as plt\n\ndef create_scatter_plot(x, y):\n    plt.scatter(x, y)\n    plt.xlabel('X-axis')\n    plt.ylabel('Y-axis')\n    plt.title('Scatter Plot of x and y')\n    plt.show()\n\nx = [1, 2, 3]\ny = [10, 20, 30]\ncreate_scatter_plot(x, y)\n",
+                                    "instruct_content": null,
+                                    "role": "SimpleCoder",
+                                    "cause_by": "__main__.SimpleWriteCode",
+                                    "sent_from": "__main__.SimpleCoder",
+                                    "send_to": [
+                                        "<all>"
+                                    ]
+                                }
+                            ]
+                        },
+                        "ignore_id": false
+                    },
+                    "working_memory": {
+                        "storage": [],
+                        "index": {},
+                        "ignore_id": false
+                    },
+                    "state": -1,
+                    "watch": [
+                        "__main__.SimpleWriteTest"
+                    ],
+                    "react_mode": "react",
+                    "max_react_loop": 1
+                },
+                "addresses": [
+                    "__main__.SimpleReviewer",
+                    "Charlie"
+                ],
+                "planner": {
+                    "plan": {
+                        "goal": "",
+                        "context": "",
+                        "tasks": [],
+                        "task_map": {},
+                        "current_task_id": ""
+                    },
+                    "working_memory": {
+                        "storage": [],
+                        "index": {},
+                        "ignore_id": false
+                    },
+                    "auto_run": false
+                },
+                "recovered": false,
+                "latest_observed_msg": null,
+                "__module_class_name": "__main__.SimpleReviewer"
+            }
+        },
+        "history": "\nHuman: x = [1,2,3], y =[10, 20, 30], make a scatter plot of x and y\nSimpleCoder: \nimport matplotlib.pyplot as plt\n\ndef create_scatter_plot(x, y):\n    plt.scatter(x, y)\n    plt.xlabel('X-axis')\n    plt.ylabel('Y-axis')\n    plt.title('Scatter Plot of x and y')\n    plt.show()\n\nx = [1, 2, 3]\ny = [10, 20, 30]\ncreate_scatter_plot(x, y)\n"
+    },
+    "investment": 3.0,
+    "idea": "x = [1,2,3], y =[10, 20, 30], make a scatter plot of x and y"
+}
