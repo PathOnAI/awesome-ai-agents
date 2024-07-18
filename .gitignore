@@ -1,0 +1,9 @@
+0719_SPC/framework/metagpt/metagpt 
+venv
+.env
+__pycache__
+.cache
+.idea
+.DS_Store
+OAI_CONFIG_LIST
+group_chat_work_dir_*
