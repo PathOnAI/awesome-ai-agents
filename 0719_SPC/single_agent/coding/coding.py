@@ -48,10 +48,6 @@ def write_to_file(file_path: str, text: str, encoding: str = "utf-8") -> str:
         return f"Error: {error}"
 from langchain_community.tools.tavily_search import TavilySearchResults
 
-def tavily_search(query):
-    tool = TavilySearchResults(max_results=4)
-    results = tool.invoke({"query": query})
-    return results
 
 def scan_folder(folder_path, depth=2):
     ignore_patterns = [".*", "__pycache__"]
@@ -72,12 +68,14 @@ def scan_folder(folder_path, depth=2):
 
 def run_python_script(script_name):
     try:
-        result = subprocess.run(
-            ["python", script_name], capture_output=True, text=True, check=True
-        )
-        logger.info(f"Run script output:\n{result.stdout}")
+        result = subprocess.run(["python", script_name], capture_output=True, text=True, check=True)
+        res = f"stdout:{result.stdout}"
+        if result.stderr:
+            res += f"stderr:{result.stderr}"
+        return res
     except subprocess.CalledProcessError as e:
-        logger.error(f"Run script error: {e}")
+        return f"Error:{e}"
+
 
 tools = [
     {
@@ -129,25 +127,6 @@ tools = [
                 },
                 "required": [
                     "file_path"
-                ]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "tavily_search",
-            "description": "Perform a search using the TavilySearch API and return the results.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "query": {
-                        "type": "string",
-                        "description": "The search query to be sent to the TavilySearch API."
-                    }
-                },
-                "required": [
-                    "query"
                 ]
             }
         }
