@@ -102,10 +102,6 @@ def main():
 
     group_chat = ResearchPlotGroupChat()
     print(f"Starting chat...")
-    # group_chat.start_chat(message)
-    #
-    # group_chat = GroupChat()
-    # print(f"Starting chat...")
 
     # Use the new context manager
     with open('research_plot_output.txt', 'w') as f:
