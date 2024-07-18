@@ -18,6 +18,7 @@ from langgraph.prebuilt import ToolNode
 from typing import Literal
 import sys
 import io
+import json
 
 load_dotenv()
 
@@ -121,11 +122,7 @@ def agent_node(state, agent, name):
     }
 
 
-from langchain_anthropic import ChatAnthropic
-
-
-llm_openai = ChatOpenAI(model="gpt-4o")
-llm_claude = ChatAnthropic(model='claude-3-opus-20240229')
+llm_openai = ChatOpenAI(model="gpt-4-1106-preview")
 
 # Research agent and node
 research_agent = create_agent(
@@ -205,9 +202,6 @@ except Exception:
 
 
 
-
-
-
 events = graph.stream(
     {
         "messages": [
@@ -221,9 +215,6 @@ events = graph.stream(
     # Maximum number of steps to take in the graph
     {"recursion_limit": 150},
 )
-
-import json
-
 
 def object_to_dict(obj):
     if isinstance(obj, dict):
@@ -239,11 +230,10 @@ def object_to_dict(obj):
 with open('research_plot_output.txt', 'w') as f:
     for s in events:
         # Convert s to a dictionary, then to a JSON string
-        print(s)
-        # s_dict = object_to_dict(s)
-        # s_str = json.dumps(s_dict, indent=2)
-        #
-        # print(s_str)
-        # print("----")
-        # f.write(s_str + "\n")
-        # f.write("----\n")
+        s_dict = object_to_dict(s)
+        s_str = json.dumps(s_dict, indent=2)
+
+        print(s_str)
+        print("----")
+        f.write(s_str + "\n")
+        f.write("----\n")

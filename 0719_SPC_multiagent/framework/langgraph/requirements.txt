@@ -1,5 +1,5 @@
-langgraph
+langgraph==0.1.4
 python-dotenv
-langchain-community
-langchain_experimental
-langchain_openai
+langchain-community==0.2.6
+langchain_experimental==0.0.62
+langchain_openai==0.1.13
