@@ -16,13 +16,6 @@ class GroupChat:
         human_input_mode = "NEVER"
         formatted_datetime = datetime.now().strftime("%Y%m%d_%H%M%S")
         dir_name = "group_chat_work_dir" + "_" + formatted_datetime
-        # Create user proxy agent, coder, product manager
-        # self.user_proxy = autogen.UserProxyAgent(
-        #     name="user_proxy",
-        #     system_message="A human admin who will give the idea and run the code provided by software_engineer.",
-        #     code_execution_config={"last_n_messages": 2, "work_dir": dir_name, "use_docker": False},
-        #     human_input_mode=human_input_mode,
-        # )
         self.debugger = autogen.AssistantAgent(
             name="debugger",
             # system_message="A human admin who will give the idea and run the code provided by software_engineer.",
