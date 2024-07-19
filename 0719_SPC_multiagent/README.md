@@ -35,7 +35,7 @@
   - **Recommendation**: If you want to make your multi-step prompting (workflow-based agent) more robust, consider using LangGraph after you finish the sequential prompting-based approach.
 
 ### (3) AutoGen
-AutoGen provides a multi-agent conversation framework as a high-level abstraction. With this framework, one can conveniently build LLM workflows.
+[AutoGen](https://arxiv.org/abs/2308.08155) provides a multi-agent conversation framework as a high-level abstraction. With this framework, one can conveniently build LLM workflows.
 - **Get Started**:
   - **Two types of agents**:
     - `autogen.UserProxyAgent`: This allows human in the loop.
@@ -53,6 +53,7 @@ AutoGen provides a multi-agent conversation framework as a high-level abstractio
   - If you want to focus on proof of concept, AutoGen is a good starting point.
 
 ### (4) MetaGPT
+[MetaGPT](https://openreview.net/forum?id=VtmBAGCN7o) is a framework designed for programming in multi-agent collaborative environments, specifically utilizing the Large Language Model (LLM).
 - **Get Started**:
   - [MetaGPT GitHub](https://github.com/geekan/MetaGPT/tree/main)
   - `metagpt --init-config` to configure the OpenAI key.
