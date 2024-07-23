@@ -12,30 +12,6 @@ _ = load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def execute_shell_command(command):
-    try:
-        result = subprocess.run(
-            command, shell=True, capture_output=True, text=True, check=True
-        )
-        output = result.stdout.strip() if result.stdout else result.stderr.strip()
-        tokens = output.split()
-        print(len(tokens))
-        if len(tokens) > 500:
-            final_result = " ".join(tokens[:100]) + "truncated...truncated" + " ".join(tokens[-100:])
-        else:
-            final_result = " ".join(tokens)
-        return final_result
-    except subprocess.CalledProcessError as e:
-        return f"Error executing command '{command}': {e.stderr.strip()}"
-
-def read_file(file_path: str, encoding: str = "utf-8") -> str:
-    if not os.path.isfile(file_path):
-        return f"Error: The file {file_path} does not exist."
-    try:
-        with open(file_path, encoding=encoding) as f:
-            return f.read()
-    except Exception as error:
-        return f"Error: {error}"
 
 def write_to_file(file_path: str, text: str, encoding: str = "utf-8") -> str:
     try:
@@ -47,25 +23,7 @@ def write_to_file(file_path: str, text: str, encoding: str = "utf-8") -> str:
         return "File written successfully."
     except Exception as error:
         return f"Error: {error}"
-from langchain_community.tools.tavily_search import TavilySearchResults
 
-
-def scan_folder(folder_path, depth=2):
-    ignore_patterns = [".*", "__pycache__"]
-    file_paths = []
-    for subdir, dirs, files in os.walk(folder_path):
-        dirs[:] = [
-            d for d in dirs
-            if not any(
-                d.startswith(pattern) or d == pattern for pattern in ignore_patterns
-            )
-        ]
-        if subdir.count(os.sep) - folder_path.count(os.sep) >= depth:
-            del dirs[:]
-            continue
-        for file in files:
-            file_paths.append(os.path.join(subdir, file))
-    return file_paths
 
 def run_python_script(script_name):
     try:
@@ -111,50 +69,6 @@ tools = [
     {
         "type": "function",
         "function": {
-            "name": "read_file",
-            "description": "Read a file and return its contents as a string.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "file_path": {
-                        "type": "string",
-                        "description": "The full file name with path to read."
-                    },
-                    "encoding": {
-                        "type": "string",
-                        "default": "utf-8",
-                        "description": "The encoding used to decode the file. Defaults to 'utf-8'."
-                    }
-                },
-                "required": [
-                    "file_path"
-                ]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "scan_folder",
-            "description": "Scan a directory recursively for files with path with depth 2. You can also use this function to understand the folder structure in a given folder path.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "folder_path": {
-                        "type": "string",
-                        "description": "The folder path to scan."
-                    }
-                },
-                "required": [
-                    "folder_path"
-                ]
-            },
-            "return_type": "list: A list of file paths str with the given extension, or all files if no extension is specified."
-        }
-    },
-    {
-        "type": "function",
-        "function": {
             "name": "run_python_script",
             "description": "Execute a Python script in a subprocess.",
             "parameters": {
@@ -171,25 +85,6 @@ tools = [
             }
         }
     },
-    {
-        "type": "function",
-        "function": {
-            "name": "execute_shell_command",
-            "description": "Execute a shell command in a subprocess.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "command": {
-                        "type": "string",
-                        "description": "The shell command to be executed."
-                    }
-                },
-                "required": [
-                    "command"
-                ]
-            }
-        }
-    }
 ]
 
 client = OpenAI()
@@ -255,10 +150,7 @@ class AssistantMessage(BaseModel):
 
 available_tools = {
             "write_to_file": write_to_file,
-            "read_file": read_file,
-            "scan_folder": scan_folder,
             "run_python_script": run_python_script,
-            "execute_shell_command": execute_shell_command,
         }
 def process_tool_calls(tool_calls):
     tool_call_responses: list[str] = []
@@ -335,9 +227,9 @@ def send_prompt(messages, content: str):
 
 
 
-messages = [Message(role="system", content="You are a coding agent, you first write code per instruction, write test case, and run the test, if there is bug, debug it")]
+messages = [Message(role="system", content="You are a coding agent, you first write code per instruction, thenn write test case, and run the test, if there is bug, debug it")]
 
-send_prompt(messages, "the problem is Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.You can return the answer in any order.")
+send_prompt(messages, "the problem is Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.You can return the answer in any order. ")
 
 
 def save_messages_to_json(messages, filename="coding_messages.json"):

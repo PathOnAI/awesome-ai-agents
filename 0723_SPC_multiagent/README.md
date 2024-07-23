@@ -66,13 +66,19 @@
   - **Recommendation**: As of 07/2024, it's not recommended to onboard this framework.
 
 ## Single-agent Reimplementation of Multi-agent examples
-* coding
-* research and plot
-  * define three tools:
-    * tavily search tool
-    * write to file tool
-    * python code execution tool
-
+* examples
+  * coding and debugging
+    * define five tools
+      * write to file tool
+      * python code execution tool
+  * research and plot
+    * define three tools:
+      * tavily search tool
+      * write to file tool
+      * python code execution tool
+* my conclusion 
+  * For most multi-agent collaboration tasks, where each agent has a different set of tools, we can reimplement them with function calling by passing the tools to one agent. 
+  * However, if the task is very complicated and requires multiple tools to be passed to the LLM, it will take too many prompt tokens. From an efficiency and cost perspective, passing all tools to one agent is not ideal.
 
 ## Multi-agent Framework
 - One main agent with hierarchical agent management, sub-agent in charge of a specific task.
@@ -81,6 +87,19 @@
       - tavily_search
       - multio_search
     - other existing tools as the single agent framework
+  - The sub-agent, use_search_agent, is used as a tool for the main agent.
+```python
+available_tools = {
+            "write_to_file": write_to_file,
+            "read_file": read_file,
+            "scan_folder": scan_folder,
+            "run_python_script": run_python_script,
+            "execute_shell_command": execute_shell_command,
+            "use_search_agent": use_search_agent,
+        }
+```
+The agent hierarchy of main agent
+![Component and Agent Interactions](design.png)
 - [MultiAgent GitHub](https://github.com/PathOnAI/MultiAgent)
   - Initial version working. Will maintain this as open-source project.
   - I have modified this framework to make it work for web agents.
