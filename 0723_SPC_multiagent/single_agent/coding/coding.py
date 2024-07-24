@@ -9,7 +9,16 @@ import os
 import json
 _ = load_dotenv()
 # Initialize logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("log.txt", mode="w"),
+        logging.StreamHandler()
+    ]
+)
+
+# Create a logger
 logger = logging.getLogger(__name__)
 
 
@@ -154,6 +163,7 @@ available_tools = {
         }
 def process_tool_calls(tool_calls):
     tool_call_responses: list[str] = []
+    logger.info("Number of function calls: %i", len(tool_calls))
     for _index, tool_call in enumerate(tool_calls):
         tool_call_id = tool_call.id
         function_name = tool_call.function.name
@@ -164,6 +174,8 @@ def process_tool_calls(tool_calls):
         function_response: str | None = None
         try:
             function_response = function_to_call(**function_args)
+            logger.info('function name: %s, function args: %s, function response: %s', function_name, function_args,
+                        function_response)
             tool_response_message = ToolResponseMessage(
                 tool_call_id=tool_call_id,
                 role="tool",
@@ -171,6 +183,7 @@ def process_tool_calls(tool_calls):
                 content=str(function_response),
             )
             #print(_index, tool_response_message)
+            logger.info('function name: %s, function response %s', function_name, str(function_response))
             tool_call_responses.append(tool_response_message)
         except Exception as e:
             function_response = f"Error while calling function <{function_name}>: {e}"
@@ -201,12 +214,12 @@ def send_completion_request(messages: list = None, tools: list = None, depth = 0
 
     tool_calls = response.choices[0].message.tool_calls
     if tool_calls is None:
-        logger.info('depth: %s, response: %s', depth, response)
+        logger.info('no function calling, depth: %s, response: %s', depth, response)
         message = AssistantMessage(**response.choices[0].message.model_dump())
         messages.append(message)
         return response
 
-    logger.info('depth: %s, response: %s', depth, response)
+    logger.info('has function calling, depth: %s, response: %s', depth, response)
     tool_calls = [
         ToolCall(id=call.id, function=call.function, type=call.type)
         for call in response.choices[0].message.tool_calls
