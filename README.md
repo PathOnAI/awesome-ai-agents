@@ -18,6 +18,7 @@
 |-----------|------|
 | SuperAGI | [TransformerOptimus/SuperAGI](https://github.com/TransformerOptimus/SuperAGI) |
 
+| GolemCore Bot | [alexk-dev/golemcore-bot](https://github.com/alexk-dev/golemcore-bot) |
 ### 2.1 Multi Agent Framework
 | Project | Link |
 |---------|------|
