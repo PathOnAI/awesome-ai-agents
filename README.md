@@ -17,7 +17,6 @@
 | Framework | Link |
 |-----------|------|
 | SuperAGI | [TransformerOptimus/SuperAGI](https://github.com/TransformerOptimus/SuperAGI) |
-
 | GolemCore Bot | [alexk-dev/golemcore-bot](https://github.com/alexk-dev/golemcore-bot) |
 ### 2.1 Multi Agent Framework
 | Project | Link |
@@ -27,7 +26,6 @@
 | MetaGPT | [geekan/MetaGPT](https://github.com/geekan/MetaGPT) |
 | CrewAI | [joaomdmoura/crewAI](https://github.com/joaomdmoura/crewAI) |
 | LangGraph | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) |
-| Giselle | [giselles-ai/giselle](https://github.com/giselles-ai/giselle) |
 | Giselle | [giselles-ai/giselle](https://github.com/giselles-ai/giselle) |
 | AgentLite | [SalesforceAIResearch/AgentLite](https://github.com/SalesforceAIResearch/AgentLite) |
 | LiteMultiAgent | [PathOnAI/LiteMultiAgent](https://github.com/PathOnAI/LiteMultiAgent) |
@@ -47,7 +45,7 @@
 | AI-Employee | [vignshwarar/AI-Employe](https://github.com/vignshwarar/AI-Employe) |
 | BrowserPilot | [handrew/browserpilot](https://github.com/handrew/browserpilot) |
 | Browser-Use | [browser-use/browser-use](https://github.com/browser-use/browser-use) |
-| LiteWebAgent | [browser-use/browser-use](https://github.com/browser-use/browser-use) |
+| LiteWebAgent | [PathOnAIOrg/LiteWebAgent](https://github.com/PathOnAIOrg/LiteWebAgent) |
 
 ### 4.2 Research Oriented Web Browsing Framework
 | Project | Link |
@@ -57,6 +55,8 @@
 | VisualWebArena | [https://github.com/web-arena-x/visualwebarena](https://github.com/web-arena-x/visualwebarena) |
 
 ### 4.3 Tree Search + Web Agents
+| Project | Link |
+|---------|------|
 | Search Agents | [kohjingyu/search-agents](https://github.com/kohjingyu/search-agents) |
 | VisualTreeSearch | [PathOnAI/VisualTreeSearch-Demo](https://github.com/PathOnAI/VisualTreeSearch-Demo) |
 
