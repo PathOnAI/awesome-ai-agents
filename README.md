@@ -18,6 +18,7 @@
 |-----------|------|
 | SuperAGI | [TransformerOptimus/SuperAGI](https://github.com/TransformerOptimus/SuperAGI) |
 | GolemCore Bot | [alexk-dev/golemcore-bot](https://github.com/alexk-dev/golemcore-bot) |
+| OIXA Protocol | [ivoshemi-sys/oixa-protocol](https://github.com/ivoshemi-sys/oixa-protocol) - Agent-to-agent marketplace on Base Mainnet, USDC escrow, MCP+A2A |
 ### 2.1 Multi Agent Framework
 | Project | Link |
 |---------|------|
