@@ -16,7 +16,7 @@
 ## 2. Agent Framework
 | Framework | Link |
 |-----------|------|
-| Dakera | [dakera-ai/dakera-deploy-deploy](https://github.com/dakera-ai/dakera-deploy-deploy) |
+| Dakera | [dakera-ai/dakera-deploy](https://github.com/dakera-ai/dakera-deploy) |
 | SuperAGI | [TransformerOptimus/SuperAGI](https://github.com/TransformerOptimus/SuperAGI) |
 | GolemCore Bot | [alexk-dev/golemcore-bot](https://github.com/alexk-dev/golemcore-bot) |
 ### 2.1 Multi Agent Framework
