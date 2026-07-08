@@ -74,7 +74,12 @@
 | Efficient LLM Grounding | [Towards Efficient LLM Grounding for Embodied Multi-Agent Collaboration](https://arxiv.org/pdf/2405.14314) |
 | REX | [Rapid Exploration and eXploitation for AI agents](https://arxiv.org/pdf/2307.08962) |
 
-## 7. OS
+## 7. Agent Memory and Context
+| Project | Link |
+|---------|------|
+| Tree Ring Memory | [TerminallyLazy/Tree-Ring-Memory](https://github.com/TerminallyLazy/Tree-Ring-Memory) |
+
+## 8. OS
 | Project | Link |
 |---------|------|
 | AIOS | [agiresearch/AIOS](https://github.com/agiresearch/AIOS) |
@@ -82,7 +87,7 @@
 | MemGPT | [cpacker/MemGPT](https://github.com/cpacker/MemGPT) |
 | AutoNode | [SuperAGI Blog](https://superagi.com/introducing-autonode-advancing-rpa-with-a-multi-expert-ai-system/) |
 
-## 8. AI Developer: coding agent
+## 9. AI Developer: coding agent
 | Project | Link |
 |---------|------|
 | GPT Pilot | [Pythagora-io/gpt-pilot](https://github.com/Pythagora-io/gpt-pilot) |
