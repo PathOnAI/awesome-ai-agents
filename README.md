@@ -29,6 +29,7 @@
 | Giselle | [giselles-ai/giselle](https://github.com/giselles-ai/giselle) |
 | AgentLite | [SalesforceAIResearch/AgentLite](https://github.com/SalesforceAIResearch/AgentLite) |
 | LiteMultiAgent | [PathOnAI/LiteMultiAgent](https://github.com/PathOnAI/LiteMultiAgent) |
+| NarraNexus (Apache 2.0) | [NetMindAI-Open/NarraNexus](https://github.com/NetMindAI-Open/NarraNexus) |
 
 ## 3. Large Action Model
 | Model/Resource | Link |
