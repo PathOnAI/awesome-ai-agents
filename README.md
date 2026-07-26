@@ -51,6 +51,7 @@
 | Project | Link |
 |---------|------|
 | BrowserGym | [ServiceNow/BrowserGym](https://github.com/ServiceNow/BrowserGym) |
+| ClawBench | [TIGER-AI-Lab/ClawBench](https://github.com/TIGER-AI-Lab/ClawBench) |
 | WebArena | [webarena.dev](https://webarena.dev/) |
 | VisualWebArena | [https://github.com/web-arena-x/visualwebarena](https://github.com/web-arena-x/visualwebarena) |
 
