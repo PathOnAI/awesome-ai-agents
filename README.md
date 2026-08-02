@@ -21,6 +21,7 @@
 ### 2.1 Multi Agent Framework
 | Project | Link |
 |---------|------|
+| Agon | [AutoResearch-Factory/Agon](https://github.com/AutoResearch-Factory/Agon) |
 | Agent Protocol | [AI-Engineer-Foundation/agent-protocol](https://github.com/AI-Engineer-Foundation/agent-protocol) |
 | AutoGen | [microsoft/autogen](https://github.com/microsoft/autogen) |
 | MetaGPT | [geekan/MetaGPT](https://github.com/geekan/MetaGPT) |
