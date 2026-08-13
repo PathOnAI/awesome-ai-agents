@@ -18,6 +18,7 @@
 |-----------|------|
 | SuperAGI | [TransformerOptimus/SuperAGI](https://github.com/TransformerOptimus/SuperAGI) |
 | GolemCore Bot | [alexk-dev/golemcore-bot](https://github.com/alexk-dev/golemcore-bot) |
+| Atomic Agent | [AtomicBot-ai/atomic-agent](https://github.com/AtomicBot-ai/atomic-agent) |
 ### 2.1 Multi Agent Framework
 | Project | Link |
 |---------|------|
@@ -93,6 +94,7 @@
 | AugmentCode | [augmentcode.com](https://www.augmentcode.com/) |
 | Factory AI | [factory.ai](https://www.factory.ai/) |
 | Devika | [stitionai/devika](https://github.com/stitionai/devika) |
+| Atomic Agent | [AtomicBot-ai/atomic-agent](https://github.com/AtomicBot-ai/atomic-agent) |
 
 
 
