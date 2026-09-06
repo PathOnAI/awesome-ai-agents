@@ -12,6 +12,7 @@
 | Awesome AI Agents | [e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) |
 | Open Interpreter | [OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter) |
 | Adala | [HumanSignal/Adala](https://github.com/HumanSignal/Adala) |
+| Orkas | [Orkas-AI/Orkas](https://github.com/Orkas-AI/Orkas) |
 
 ## 2. Agent Framework
 | Framework | Link |
